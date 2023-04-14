@@ -7,4 +7,4 @@
       image: "sjleenobreak/hello-world:{{ lookup('env','BUILD_NUMBER') }}"
       state: started
       ports:
-        - 80:8080
+        - "80:8080"
