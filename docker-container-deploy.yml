@@ -1,0 +1,10 @@
+- hosts: localhost
+  connection: local
+  tasks:
+  - name: create container
+    docker_container:
+      name: myweb
+      image: "sjleenobreak/hello-world:$BUILD_NUMBER"
+      state: started
+      ports:
+        - 80:8080
