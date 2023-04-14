@@ -40,7 +40,7 @@ pipeline {
     stage('Run Docker Container') {
       agent {
         docker { 
-                 image 'sjleenobreak/jenkins_ansible:v2'
+                 image 'sjleenobreak/jenkins-ansible'
                  args '-u 0:0 -e DOCKER_HOST=tcp://192.168.56.103:2375'
        }
      }
